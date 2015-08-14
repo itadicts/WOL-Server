@@ -19,7 +19,8 @@
 	//Contraseña en sha256 para poder acceder.
 	//Puedes usar un generador online como por ejemplo: http://www.xorbin.com/tools/sha256-hash-calculator.
 	//Si no estás usando HTTPS tu contraseña puede ser interceptada con un MITM
-	$APPROVED_HASH = "24446e5899ce33ea55e4a9becbcf3dc1eb7ba3ebac61950334dd7c13808c623d";
+	//Por defecto es: Hola
+	$APPROVED_HASH = "e633f4fc79badea1dc5db970cf397c8248bac47cc3acf9915ba60b5d76b0e88f";
 	
 	//Numero de intentos de enviar WOL al equipo a despertar.
 	$MAX_PINGS = 10;
@@ -27,13 +28,13 @@
 	$SLEEP_TIME = 5;
 
 	//Nombre de los equipos
-	$COMPUTER_NAME = array("Fijo","Demo");
+	$COMPUTER_NAME = array("Fijo","Portatil");
 	
 	//MACs de los equipos que vamos a querer despertar.
-	$COMPUTER_MAC = array("90:2B:34:30:A8:44","00:00:00:00:00:00:00");
+	$COMPUTER_MAC = array("11:22:33:44:55:66","00:00:00:00:00:00:00");
 	
 	//IP de los equipos. Se debe usar una reserva en el DHCP o IP manual en los equipos para que siempre tengan la misma.
-	$COMPUTER_LOCAL_IP = array("192.168.1.128","192.168.1.133");
+	$COMPUTER_LOCAL_IP = array("192.168.1.1","192.168.1.12");
 	
 	//Puerto usado para el apagado remoto
 	//Software a instalar para poder apagar el equipo remotamente http://www.ireksoftware.com/SleepOnLan/
