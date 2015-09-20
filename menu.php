@@ -155,7 +155,7 @@ ob_end_flush();
 				        </script>
 	   					<?php
 					if ($pinginfo == "1 packets transmitted, 0 packets received, 100% packet loss")
-						//$pinginfo == "1 packets transmitted, 0 received, 100% packet loss, time 0ms"
+						
 					{
 						$asleep = true;
 						echo "<h5>" . $COMPUTER_NAME[$selectedComputer] . " parece que está apagado.</h5>";
@@ -182,12 +182,12 @@ ob_end_flush();
 						$pinginfo = exec("ping -c 1 " . $COMPUTER_LOCAL_IP[$selectedComputer]);
 						$count++;
 						if ($pinginfo != "1 packets transmitted, 0 packets received, 100% packet loss"  )
-							//or $pinginfo != "1 packets transmitted, 0 received, 100% packet loss, time 0ms"
+							
 						{
 							$down = false;
 							echo "<span style='color:#00CC00;'><b>¡Está vivo!</b></span><br />";
 							echo "<p><a href='?computer=" . $selectedComputer . "'>Volver al inicio</a></p>";
-							echo $pinginfo;
+							
 							$show_form = false;
 						}
 						else
